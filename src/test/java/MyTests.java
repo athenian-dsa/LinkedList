@@ -11,7 +11,7 @@ public class MyTests {
         for(int i : arr){
             list.insertFirst(i);
         }
-        assertEquals(list.toString(), "6 -> 1 -> 3 -> null");
+        assertEquals("6 -> 1 -> 3 -> null", list.toString());
     }
 
     @Test
@@ -22,7 +22,7 @@ public class MyTests {
         for(int i : arr){
             list.insertLast(i);
         }
-        assertEquals(list.toString(), "3 -> 1 -> 6 -> null");
+        assertEquals("3 -> 1 -> 6 -> null", list.toString());
     }
 
     @Test
@@ -47,9 +47,9 @@ public class MyTests {
         for(int i : arr){
             list.insertLast(i);
         }
-        assertEquals(list.removeFirst(), 3);
-        assertEquals(list.removeFirst(), 1);
-        assertEquals(list.removeFirst(), 6);
+        assertEquals(3, list.removeFirst());
+        assertEquals(1, list.removeFirst());
+        assertEquals(6, list.removeFirst());
     }
 
     @Test
@@ -60,7 +60,9 @@ public class MyTests {
         for(int i : arr){
             list.insertLast(i);
         }
-        assertTrue(list.removeLast()==6 && list.removeLast()==1 && list.removeLast()==3);
+        assertEquals(6, list.removeLast());
+        assertEquals(1, list.removeLast());
+        assertEquals(3, list.removeLast());
     }
 
     @Test
